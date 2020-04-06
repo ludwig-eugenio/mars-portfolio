@@ -1,0 +1,190 @@
+heading-1 = 44px
+heading-2 = 32px
+heading-3 = 24px
+
+l-font = 18px
+r-font = 16px
+s-font = 14px
+
+color-yellow = #ffe600
+color-blue = #4a7dff
+
+Poppins-font = 'Poppins', sans-serif
+
+
+@keyframes bounce 
+    0% 
+        transform translateY(0) 
+    50%
+        transform translateY(-10px) 
+    100%
+        transform translateY(0)
+
+@keyframes bounceRight 
+    0% 
+        transform translateX(0) 
+    50%
+        transform translateX(10px) 
+    100%
+        transform translateX(0)
+
+*
+    box-sizing border-box
+    padding 0
+    margin 0
+    font-family Poppins-font
+    list-style none
+
+h1
+    font-size heading-1
+h2
+    font-size heading-2
+h3
+    font-size heading-3
+
+a
+    text-decoration none
+
+.container
+    margin 0 50px 0 120px
+
+.menu
+    position fixed
+    right 50px
+    top 35px
+    z-index 10
+
+nav 
+    position fixed
+    width 100vw
+    background-color rgba(255,255,255, .8)
+    transform translateY(-100%)
+    transition .3s
+    z-index 9
+    .container
+        display flex
+        justify-content space-between
+        margin-top 20px
+        margin-bottom 20px
+        .logo
+            h1
+                font-size heading-2
+    &.show
+        transform translateY(0)
+        
+.landing-page
+    .banner
+        display flex
+        justify-content center
+        flex-direction column
+        height 100vh
+        .greetings
+            width 100%
+            font-weight 300
+            margin-bottom 20px
+        .header-logo
+            position relative
+            span::after
+                content ''
+                background-color color-yellow
+                height 8px
+                width 100%
+                z-index -1
+                position absolute
+                bottom 3px
+                left 0
+        .banner-footer
+            position absolute
+            bottom 0
+            >img 
+                animation bounce 1s infinite
+    .content-block
+        display flex
+        height 100vh
+        align-items center
+        &:nth-child(even)
+            flex-direction row-reverse
+        .content-img-container
+            background color-blue
+            height 80%
+            width 55%
+            .content-img
+                object-fit cover
+                object-position bottom
+                position relative
+                left 140px
+                top 50px
+                height 600px
+                width 700px
+        .content
+            height 100%
+            width 45%
+            align-items center
+            display flex
+            >div
+                margin 120px
+                position relative
+                h2
+                    margin-bottom 30px
+                .content-description
+                    font-weight 300
+                    margin-bottom 70px
+                    font-size l-font
+                .content-footer
+                    font-weight 300
+                    display flex
+                    justify-content space-between
+                    .details
+                        li
+                            display inline
+                            text-transform uppercase
+                            opacity .3
+                    >img:hover 
+                        animation bounceRight 1s infinite
+                        cursor pointer
+    .footer
+        display flex
+        flex-direction column
+        justify-content center
+        height: 80vh
+        >h1
+            margin-bottom 40px
+        >h2
+            margin-bottom 35px
+            font-weight 300
+            cursor pointer
+            >span
+                position relative
+                >span::after
+                    content ''
+                    background-color color-yellow
+                    height 8px
+                    width 100%
+                    z-index -1
+                    position absolute
+                    bottom -2px
+                    left 0
+                    opacity 0
+                    transition .3s
+                >span:hover::after
+                    content ''
+                    opacity 1
+                
+
+        >ul
+            display flex
+            margin-bottom 140px
+            >li
+                >a
+                    font-size l-font
+                    margin-right 20px
+                    filter grayscale()
+                    color color-yellow
+                    transition .3s
+                    &:hover
+                        filter none
+        .copyright
+            opacity .2
+            font-weight 300
+            font-size s-font
+        
