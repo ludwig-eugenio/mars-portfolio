@@ -22,18 +22,18 @@ $(document).ready(function() {
       //   .addIndicators()
       .addTo(controller);
 
-    var imgScene = new ScrollMagic.Scene({
-      triggerElement: this,
-      duration: "40%",
-      triggerHook: 0.4
-    })
-      .setTween(
-        TweenMax.from(this.children[0].children[0], 1, {
-          y: "-30%",
-          x: "-30%"
-        })
-      )
-      //   .addIndicators()
-      .addTo(controller);
+    // var imgScene = new ScrollMagic.Scene({
+    //   triggerElement: this,
+    //   duration: "40%",
+    //   triggerHook: 0.4
+    // })
+    //   .setTween(
+    //     TweenMax.from(this.children[0].children[0], 1, {
+    //       y: "-30%",
+    //       x: "-30%"
+    //     })
+    //   )
+    //   //   .addIndicators()
+    //   .addTo(controller);
   });
 });
