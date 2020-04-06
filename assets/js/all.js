@@ -11,7 +11,7 @@ $(document).ready(function() {
   $(".content-block").each(function() {
     var scene = new ScrollMagic.Scene({
       triggerElement: this,
-      duration: "50%",
+      duration: "70%",
       triggerHook: 0.6
     })
       .setTween(
